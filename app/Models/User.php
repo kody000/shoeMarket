@@ -35,8 +35,13 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
-    public function posts()
+    public function shoes()
     {
-        return $this->hasMany(Post::class);
+        return $this->hasMany(Shoe::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }

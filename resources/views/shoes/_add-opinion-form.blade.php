@@ -1,6 +1,6 @@
 @auth
     <x-panel>
-        <form method="POST" action="/posts/{{ $post->slug }}/comments">
+        <form method="POST" action="/shoes/{{ $shoe->slug }}/opinions">
             @csrf
 
             <header class="flex items-center">
@@ -10,7 +10,7 @@
                      height="40"
                      class="rounded-full">
 
-                <h2 class="ml-4">Want to participate?</h2>
+                <h2 class="ml-4">Leave your opinions.</h2>
             </header>
 
             <div class="mt-6">
@@ -34,6 +34,6 @@
 @else
     <p class="font-semibold">
         <a href="/register" class="hover:underline">Register</a> or
-        <a href="/login" class="hover:underline">log in</a> to leave a comment.
+        <a href="/login" class="hover:underline">log in</a> to leave opinion.
     </p>
 @endauth
